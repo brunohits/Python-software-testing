@@ -29,7 +29,7 @@ class TestSolution(unittest.TestCase):
                          [["O", "O"],
                           ["O", "O"]])
 
-    def test_0_in_center(self):
+    def test_O_in_center(self):
         sut = Solution()
         self.assertEqual(sut.solve([["X", "X", "X"],
                                     ["X", "O", "X"],
@@ -75,6 +75,19 @@ class TestSolution(unittest.TestCase):
             sut.solve([
                 ["X", "Z"],
                 ["SXL", "123"]])
+
+    def test_not_all_rows_same_length(self):
+        sut = Solution()
+        with self.assertRaises(ValueError):
+            sut.solve([
+                ["X", "O", "X"],
+                ["O", "X"]
+            ])
+
+    def test_empty_board(self):
+        sut = Solution()
+        with self.assertRaises(ValueError):
+            sut.solve([[]])
 
 
 if __name__ == '__main__':
