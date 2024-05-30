@@ -73,8 +73,8 @@ class TestSolution(unittest.TestCase):
         sut = Solution()
         with self.assertRaises(ValueError):
             sut.solve([
-                ["X", "Z124"],
-                ["O", "X"]])
+                ["X", "Z"],
+                ["SXL", "123"]])
 
 
 if __name__ == '__main__':
