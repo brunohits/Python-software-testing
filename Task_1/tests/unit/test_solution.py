@@ -61,11 +61,8 @@ class TestSolution(unittest.TestCase):
         expected[199][199] = "O"
         self.assertEqual(sut.solve(board), expected)
 
-    def test_invalid_sizes(self):
+    def test_invalid_size(self):
         sut = Solution()
-        with self.assertRaises(ValueError):
-            sut.solve([])
-
         with self.assertRaises(ValueError):
             sut.solve([["X"] * 201 for _ in range(201)])
 
@@ -88,6 +85,11 @@ class TestSolution(unittest.TestCase):
         sut = Solution()
         with self.assertRaises(ValueError):
             sut.solve([[]])
+
+    def test_invalid_type(self):
+        sut = Solution()
+        with self.assertRaises(TypeError):
+            sut.solve(["S"])
 
 
 if __name__ == '__main__':

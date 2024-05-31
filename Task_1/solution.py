@@ -6,8 +6,11 @@ class Solution:
         """
         Do not return anything, modify board in-place instead.
         """
+        if not all(isinstance(row, list) and all(isinstance(cell, str) for cell in row) for row in board):
+            raise TypeError("Expected a list of lists of strings.")
+
         if not board or not board[0]:
-            raise ValueError("Board cannot be empty")
+            raise ValueError("Empty board")
 
         n, m = len(board), len(board[0])
         if not (1 <= n <= 200) or not (1 <= m <= 200):
