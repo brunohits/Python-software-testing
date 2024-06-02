@@ -1,5 +1,5 @@
-from Task_3.page_objects import page
-from Task_3.page_objects.locators import MainPageLocators
+from Task_3_UI.page_objects import page
+from Task_3_UI.page_objects.locators import MainPageLocators
 
 
 class TestSurroundedRegions():

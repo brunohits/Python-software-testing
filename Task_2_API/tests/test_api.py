@@ -1,6 +1,6 @@
 import requests
 
-from Task_2.lib.apiwrapper import get_form, post_form, BASE_URL
+from Task_2_API.lib.apiwrapper import get_form, post_form, BASE_URL
 
 
 class TestClass:

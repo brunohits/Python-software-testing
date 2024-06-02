@@ -1,6 +1,6 @@
 from selenium.common import NoSuchElementException
 
-from Task_3.page_objects.locators import MainPageLocators, SearchResultsPageLocators
+from Task_3_UI.page_objects.locators import MainPageLocators, SearchResultsPageLocators
 
 
 class BasePage(object):
